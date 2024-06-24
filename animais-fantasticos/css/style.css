@@ -230,18 +230,18 @@ body {
   }
 }
 
-.js .js-tabcontent section {
+.js [data-tab="content"] section {
   display: none;
 }
 
-.js-tabcontent section.ativo {
+[data-tab="content"] section.ativo {
   display: block !important;
   animation: show 0.5s forwards;
 }
-.js-tabcontent section.ativo.show-right {
+[data-tab="content"] section.ativo.show-right {
   animation: show-right 0.5s forwards;
 }
-.js-tabcontent section.ativo.show-down {
+[data-tab="content"]t section.ativo.show-down {
   animation: show-down 0.5s forwards;
 }
 
