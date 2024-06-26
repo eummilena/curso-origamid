@@ -1,7 +1,7 @@
-import initScrollSuave from "./modules/scroll-suave";
-import initAnimacaoScroll from "./modules/scroll-animacao";
-import initAccordion from "./modules/accordion";
-import initTabNav from "./modules/tabnav";
+import initScrollSuave from "./modules/scroll-suave.js";
+import initAnimacaoScroll from "./modules/scroll-animacao.js";
+import initAccordion from "./modules/accordion.js";
+import initTabNav from "./modules/tabnav.js";
 
 initScrollSuave();
 initAnimacaoScroll();
