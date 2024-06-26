@@ -10,7 +10,7 @@ export default function initModal() {
     // }
     function toggleModal(event) {
       event.preventDefault();
-      container.classList.add("ativo");
+      containerModal.classList.add("ativo");
     }
 
     // function fecharModal(event) {
