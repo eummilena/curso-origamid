@@ -4,22 +4,26 @@ export default function initModal() {
   const containerModal = document.querySelector('[data-modal="container"]');
 
   if (botaoAbrir && botaoFechar && containerModal) {
-    function abrirModal(event) {
+    // function abrirModal(event) {
+    //   event.preventDefault();
+    //   container.classList.add("ativo");
+    // }
+    function toggleModal(event) {
       event.preventDefault();
       container.classList.add("ativo");
     }
 
-    function fecharModal(event) {
-      event.preventDefault();
-      container.classList.remove("ativo");
-    }
+    // function fecharModal(event) {
+    //   event.preventDefault();
+    //   container.classList.remove("ativo");
+    // }
 
     function cliqueForaModal(event) {
       console.log(event);
-      if (event.target === this) fecharModal(event);
+      if (event.target === this) toggleModal(event);
     }
-    botaoAbrir.addEventListener("click", abrirModal);
-    botaoFechar.addEventListener("click", fecharModal);
+    botaoAbrir.addEventListener("click", toggleModal);
+    botaoFechar.addEventListener("click", toggleModal);
     containerModal.addEventListener("click", cliqueForaModal);
   }
 }
