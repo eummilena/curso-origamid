@@ -1,4 +1,4 @@
-.modal-conteiner {
+.modal-container {
   height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -11,7 +11,7 @@
   align-items: center;
   display: none;
 }
-.modal-conteiner.ativo {
+.modal-container.ativo {
   display: flex;
 }
 .modal {
