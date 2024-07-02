@@ -7,8 +7,10 @@ export default function initDropdownMenu() {
     // menu.addEventListener('click', handleClick);
     // menu.addEventListener('touchstart', handleClick);
     //----------- outra alternativa de chamar eventos ----------
-    ["touchstart", "click"].forEach((userEvent) => {
-      menu.addEventListener(userEvent, handleClick);
+    dropdownMenus.forEach((menu) => {
+      ["touchstart", "click"].forEach((userEvent) => {
+        menu.addEventListener(userEvent, handleClick);
+      });
     });
 
     //touchstart - é tipo o click só que a versão eé indicada para mobile
@@ -16,8 +18,8 @@ export default function initDropdownMenu() {
 
   function handleClick(event) {
     event.preventDefault();
-    this.classList.toggle("active");
-    outsideClick(this, () => {
+    this.classList.add("active");
+    outsideClick(this, ["touchstart", "click"], () => {
       this.classList.remove("active");
     });
   }
