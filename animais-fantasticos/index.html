@@ -20,7 +20,7 @@
         <li data-dropdown>
           <a href="sobre.html">Sobre</a>
           <ul class="dropdown-menu">
-            <li><a href="empresa.html">A empresa</a></li>
+            <li><a href="empresa.html">A Empresa</a></li>
             <li><a href="equipe.html">Equipe</a></li>
             <li><a href="socios.html">Sócios</a></li>
             <li><a href="investidores.html">Investidores</a></li>
@@ -28,7 +28,7 @@
         </li>
         <li><a href="#faq">Faq</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a href="login.html" data-modal="abrir">Login →</a></li>
+        <li><a data-modal="abrir" href="login.html">Login →</a></li>
       </ul>
     </nav>
     <section class="grid-section animais" data-anime="scroll" id="animais">
@@ -156,7 +156,7 @@
 
     <section class="grid-section contato" data-anime="scroll" id="contato">
       <h1 class="titulo">Contato</h1>
-      <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento">
+      <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
         <img src="img/mapa.png">
       </div>
       <ul class="dados">
@@ -172,19 +172,18 @@
     </footer>
   </div>
 
-  <div class="modal-container" data-modal="container">
+  <section class="modal-container" data-modal="container">
     <div class="modal">
       <button data-modal="fechar" class="fechar">X</button>
       <form action="">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="">
+        <label for="email">Email</label>
+        <input type="text" for="email" id="email">
         <label for="senha">Senha</label>
-        <input type="password" name="senha" id="senha" placeholder="">
+        <input type="password" for="senha" id="senha">
         <button type="submit">Entrar</button>
       </form>
     </div>
-  </div>
-
+  </section>
   <script type="module" src="js/script.js"></script>
 </body>
 
