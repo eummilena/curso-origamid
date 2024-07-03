@@ -6,17 +6,18 @@ export default function initTooltip() {
   });
 
   function onMouseOver(event) {
-    const tooltipBox = criarTooltipBox(this);
+    const tooltipBox = criarTooltipBox(this); //cria a tooltip dentro do mapa
 
-    onMouseMove.tooltipBox = tooltipBox;
+    onMouseMove.tooltipBox = tooltipBox; //propiedade atribuida ao obj onMouseMove
     this.addEventListener("mousemove", onMouseMove);
 
-    onMouseLeave.tooltipBox = tooltipBox;
-    onMouseLeave.element = this;
+    onMouseLeave.tooltipBox = tooltipBox; //propiedade atribuida ao obj onMouseLeave
+    onMouseLeave.element = this; //propiedade atribuida ao obj onMouseLeave
     this.addEventListener("mouseleave", onMouseLeave);
   }
 
   const onMouseLeave = {
+    //objeto criado para remover o tooltip
     handleEvent() {
       this.tooltipBox.remove();
       this.element.removeEventListener("mouseleave", onMouseLeave);
@@ -25,6 +26,7 @@ export default function initTooltip() {
   };
 
   const onMouseMove = {
+    //objeto criado para tooltip aparecer dentro do mapa
     handleEvent(event) {
       this.tooltipBox.style.top = event.pageY + 20 + "px";
       this.tooltipBox.style.left = event.pageX + 20 + "px";
