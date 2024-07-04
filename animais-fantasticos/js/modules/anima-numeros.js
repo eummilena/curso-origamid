@@ -14,8 +14,8 @@ export default function initAnimaNumeros() {
           numero.innerText = total;
           clearInterval(timer);
         }
-      });
-    }, 25 * Math.random());
+      }, 25 * Math.random());
+    });
   }
   function handleMutation(mutation) {
     if (mutation[0].target.classList.contains("ativo")) {
