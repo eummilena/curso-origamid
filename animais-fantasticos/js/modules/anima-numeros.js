@@ -7,13 +7,14 @@ export default function initAnimaNumeros() {
       const incremento = Math.floor(total / 100);
       let start = 0;
 
-      const timer = setInterval(() => {});
-      start = start + incremento;
-      numero.innerText = start;
-      if (start > total) {
-        numero.innerText = total;
-        clearInterval(timer);
-      }
+      const timer = setInterval(() => {
+        start = start + incremento;
+        numero.innerText = start;
+        if (start > total) {
+          numero.innerText = total;
+          clearInterval(timer);
+        }
+      });
     }, 25 * Math.random());
   }
   function handleMutation(mutation) {
