@@ -1,10 +1,9 @@
 .numeros-grid {
+  grid-column: 2 / 4;
   display: grid;
-  grid-column: 2/4;
-  grid-template-columns: 1fr, 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
 }
-
 .numeros-grid h3 {
   font-family: "Playfair Display SC";
   font-size: 2rem;
